@@ -1,0 +1,51 @@
+{{define "start" }}
+{{template "headboard"}}
+
+
+    <a name="" id="" class="btn btn-primary" href="/registrar" role="button">Registrar aire acondicionado</a>
+<br/><br/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Edificio</th>
+            <th>Aula</th>
+            <th>Equipo</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Tipo</th>
+            <th>Capacidad_BTU</th>
+            <th>Refrigerante</th>
+            <th>Voltaje</th>
+            <th>Ubicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range.}}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Edificio}}</td>
+            <td>{{.Aula}}</td>
+            <td>{{.Equipo}}</td>
+            <td>{{.Marca}}</td>
+            <td>{{.Modelo}}</td>
+            <td>{{.Tipo}}</td>
+            <td>{{.Capacidad_BTU}}</td>
+            <td>{{.Refrigerante}}</td>
+            <td>{{.Voltaje}}</td>
+            <td>{{.Ubicación}}</td>
+            <td>
+            <a name="" id="" class="btn btn-warning" href="/editar?id={{.Id}}" role="button">Editar</a>
+                |
+            <a name="" id="" class="btn btn-danger" href="/borrar?id={{.Id}}" role="button">Borrar</a>
+            
+            </td>
+        </tr>
+
+        {{end}}
+
+    </tbody>
+</table>
+{{template "footer"}}
+{{end}}

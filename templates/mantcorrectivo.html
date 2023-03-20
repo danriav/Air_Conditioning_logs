@@ -1,0 +1,51 @@
+{{define "mantcorrectivo"}}
+{{template "headboard"}}
+
+    <a name="" id="" class="btn btn-primary" href="/registrarmantcorr" role="button">Registrar mantenimiento correctivo</a>
+<br/><br/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Fecha</th>
+            <th>Edificio</th>
+            <th>Aula</th>
+            <th>Equipo</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Tipo</th>
+            <th>Voltaje</th>
+            <th>Amperaje</th>
+            <th>Encargado_del_mantenimiento</th>
+            <th>Trabajo_realizado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range.}}
+        <tr>
+            <th>{{.Id}}</th>
+            <th>{{.Fecha}}</th>
+            <th>{{.Edificio}}</th>
+            <th>{{.Aula}}</th>
+            <th>{{.Equipo}}</th>
+            <th>{{.Marca}}</th>
+            <th>{{.Modelo}}</th>
+            <th>{{.Tipo}}</th>
+            <th>{{.Voltaje}}</th>
+            <th>{{.Amperaje}}</th>
+            <th>{{.Encargado_del_mantenimiento}}</th>
+            <th>{{.Trabajo_realizado}}</th>
+            <td>
+            <a name="" id="" class="btn btn-warning" href="/editarmantcorr?id={{.Id}}" role="button">Editar</a>
+                |
+            <a name="" id="" class="btn btn-danger" href="/borrarmantcorr?id={{.Id}}" role="button">Borrar</a>
+            
+            </td>
+        </tr>
+
+        {{end}}
+
+    </tbody>
+</table>
+{{template "footer"}}
+{{end}}
