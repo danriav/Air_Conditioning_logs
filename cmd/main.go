@@ -5,12 +5,10 @@ import (
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
-	Equipos "aires_acondicionados/Equipos"
-	MantCorr "aires_acondicionados/MantCorrectivo"
-	MantPrev "aires_acondicionados/MantPreventivo"
+	Equipos "aires_acondicionados/internal/Handlers/Equipos"
+	MantCorr "aires_acondicionados/internal/Handlers/MantCorrectivo"
+	MantPrev "aires_acondicionados/internal/Handlers/MantPreventivo"
 )
-
-
 
 
 

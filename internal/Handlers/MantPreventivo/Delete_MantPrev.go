@@ -5,7 +5,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	conn "aires_acondicionados/Connection"
+	conn "aires_acondicionados/db"
 )
 
 func Borrarmantprev(w http.ResponseWriter, r *http.Request){
